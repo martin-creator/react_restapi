@@ -3,6 +3,7 @@ import NavBar from './components/NavBar'
 import About from './screens/About'
 import Contact from './screens/Contact'
 import Home from './screens/Home'
+import Footer from './components/Footer'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
     </Router>
   )
