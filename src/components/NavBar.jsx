@@ -5,7 +5,7 @@ function NavBar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Navbar
+        Booking Site
         </a>
         <button
           className="navbar-toggler"
@@ -22,12 +22,12 @@ function NavBar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                Home
+                About Us
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Link
+                Contact
               </a>
             </li>
           </ul>
