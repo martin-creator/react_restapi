@@ -9,7 +9,9 @@ function PostDetail() {
     const [user, setUser] = useState([]); // store all posts
     const {postId, userId } = useParams() // get params from url using object destructuring
 
-    const getPost()=>{
+    const getPost = ()=>{
+        console.log("Post Id is", postId)
+        console.log(`${API_BASE_URL}/posts/${postId}`)
         axios.get(`${API_BASE_URL}/posts/${postId}`)
         .then((response) => {
             console.log(response.data)
