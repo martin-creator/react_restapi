@@ -1,6 +1,27 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 function AllPosts() {
+  const [posts, setPosts] = useState([]); // store all posts
+
+  // fetch all posts from API using Es6 fetch
+  const getAllPosts = () => {
+
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json)
+      });
+
+  };
+
+  // we want to load data on page load of this component
+  useEffect(() => {
+    //console.log("All posts loaded");
+    getAllPosts();
+  }, []);
+
+  // Empty array as second argument ensures that this effect runs only once.
   return (
     <div>
       <section className=" container pt-2">
