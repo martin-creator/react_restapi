@@ -2,9 +2,9 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 function PostDetail() {
-    const {} = useParams()
+    const {postId, userId } = useParams() // get params from url using object destructuring
   return (
-    <div>PostDetail</div>
+    <div>PostDetail Post-{postId}, User-{userId} </div>
   )
 }
 

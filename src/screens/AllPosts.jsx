@@ -10,7 +10,7 @@ function AllPosts() {
   // fetch all posts from API using Es6 fetch
   const getAllPosts = () => {
     setLoader(true);
-    fetch(`${API_BASE_URL} /posts`)
+    fetch(`${API_BASE_URL}/posts`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json)
