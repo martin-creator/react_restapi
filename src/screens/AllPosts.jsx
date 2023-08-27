@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { API_BASE_URL } from "../config/constant";
+import { Link } from "react-router-dom";
 
 function AllPosts() {
   const [posts, setPosts] = useState([]); // store all posts
@@ -56,9 +57,9 @@ function AllPosts() {
                  {post.body}
                 </p>
                 <div className="d-grid">
-                  <a href="#" className="btn btn-warning">
+                  <Link href="#" className="btn btn-warning">
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
