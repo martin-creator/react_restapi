@@ -28,9 +28,9 @@ function AllPosts() {
       <section className=" container pt-2">
         <h3 className="text-center text-uppercase py-4">All Posts</h3>
         <div className="row">
-          { posts.map((post, index, key) => {
+          { posts.map((post, index,) => {
 
-          return (<div className="col-lg-4 col-md-4 col-sm-12">
+          return (<div key={post.id} className="col-lg-4 col-md-4 col-sm-12">
             <div className="card">
               <img
                 src="https://source.unsplash.com/random/400*400/?city,night"
