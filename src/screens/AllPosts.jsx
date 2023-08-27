@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { API_BASE_URL } from "../config/constant";
 
 function AllPosts() {
   const [posts, setPosts] = useState([]); // store all posts
@@ -8,7 +9,7 @@ function AllPosts() {
   // fetch all posts from API using Es6 fetch
   const getAllPosts = () => {
     setLoader(true);
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch(`${API_BASE_URL} /posts`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json)
