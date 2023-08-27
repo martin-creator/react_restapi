@@ -3,15 +3,17 @@ import { useState, useEffect } from "react";
 
 function AllPosts() {
   const [posts, setPosts] = useState([]); // store all posts
+  const [loader, setLoader] = useState(); // store all posts
 
   // fetch all posts from API using Es6 fetch
   const getAllPosts = () => {
-
+    setLoader(true);
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
       .then((json) => {
         console.log(json)
         setPosts(json);
+        setLoader(false);
       });
 
   };
@@ -28,7 +30,13 @@ function AllPosts() {
       <section className=" container pt-2">
         <h3 className="text-center text-uppercase py-4">All Posts</h3>
         <div className="row">
-          { posts.map((post, index,) => {
+          { 
+
+          loader ? <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div> :
+          
+          posts.map((post, index,) => {
 
           return (<div key={post.id} className="col-lg-4 col-md-4 col-sm-12">
             <div className="card">
