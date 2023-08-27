@@ -28,9 +28,9 @@ function AllPosts() {
       <section className=" container pt-2">
         <h3 className="text-center text-uppercase py-4">All Posts</h3>
         <div className="row">
-          { posts.map((post, index) => {
+          { posts.map((post, index, key) => {
 
-          return <div className="col-lg-4 col-md-4 col-sm-12">
+          return (<div className="col-lg-4 col-md-4 col-sm-12">
             <div className="card">
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
@@ -38,10 +38,9 @@ function AllPosts() {
                 alt="..."
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">{post.title}</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                 {post.body}
                 </p>
                 <div className="d-grid">
                   <a href="#" className="btn btn-warning">
@@ -50,7 +49,7 @@ function AllPosts() {
                 </div>
               </div>
             </div>
-          </div>
+          </div>)
           })}
         </div>
       </section>
