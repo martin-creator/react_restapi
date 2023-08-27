@@ -57,7 +57,7 @@ function AllPosts() {
                  {post.body}
                 </p>
                 <div className="d-grid">
-                  <Link to={`/posts/${post.id}`} className="btn btn-warning">
+                  <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-warning">
                     Read More
                   </Link>
                 </div>
