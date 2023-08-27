@@ -44,7 +44,7 @@ function AllPosts() {
           
           posts.map((post, index,) => {
 
-          return (<div key={post.id} className="col-lg-4 col-md-4 col-sm-12">
+          return (<div key={index} className="col-lg-4 col-md-4 col-sm-12">
             <div className="card">
               <img
                 src="https://source.unsplash.com/random/400*400/?city,night"
@@ -57,7 +57,7 @@ function AllPosts() {
                  {post.body}
                 </p>
                 <div className="d-grid">
-                  <Link href="#" className="btn btn-warning">
+                  <Link to={`/posts/${post.id}`} className="btn btn-warning">
                     Read More
                   </Link>
                 </div>
