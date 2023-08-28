@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { API_BASE_URL } from '../config/constant'
+import './PostDetail.css'
 
 function PostDetail() {
     const [post, setPost] = useState([]); // store all posts
@@ -18,8 +19,8 @@ function PostDetail() {
     
 
     const getPostAndUser = ()=>{
-        console.log("Post Id is", postId)
-        console.log(`${API_BASE_URL}/posts/${postId}`)
+        //console.log("Post Id is", postId)
+        //console.log(`${API_BASE_URL}/posts/${postId}`)
         axios.get(`${API_BASE_URL}/posts/${postId}`)
         .then((PostRes) => {
             const {title, body} = PostRes.data
