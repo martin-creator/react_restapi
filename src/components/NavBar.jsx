@@ -32,6 +32,11 @@ function NavBar() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link active text-uppercase" aria-current="page" to="/create">
+                Create Post
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link active text-uppercase" aria-current="page" to="/about">
                 About Us
               </NavLink>
