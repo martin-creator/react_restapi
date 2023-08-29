@@ -21,6 +21,7 @@ function App() {
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/posts" element={<AllPosts />} />
         <Route exact path="/create" element={<CreatePost />} />
+        <Route exact path='/create/:postId/:userId' element={<CreatePost />}></Route>
         <Route exact path="/posts/:postId/:userId" element={<PostDetail />} />
       </Routes>
       <Footer />
