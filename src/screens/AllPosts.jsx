@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import { API_BASE_URL } from '../config/constant'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { UserContext } from '../App';
+//import { UserContext } from '../App';
 
 function AllPosts() {
 
@@ -11,7 +11,7 @@ function AllPosts() {
     //useState hook helps us create this variable with empty array
     const [posts, setPosts] = useState([]);
     const [loader, setLoader] = useState(false);
-    const { state, dispatch } = useContext(UserContext);
+    //const { state, dispatch } = useContext(UserContext);
 
     function alertFunction(message, type) {
         var wrapper = document.createElement('div')
