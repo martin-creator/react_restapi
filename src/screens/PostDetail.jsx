@@ -1,11 +1,12 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useNavigate } from 'react'
 import axios from 'axios'
 import { API_BASE_URL } from '../config/constant'
 import './PostDetail.css'
 
 function PostDetail() {
+    const navigate = useNavigate()
     const [post, setPost] = useState([]); // store all posts
     const [user, setUser] = useState([]); // store all posts
     const {postId, userId } = useParams() // get params from url using object destructuring
@@ -92,11 +93,11 @@ function PostDetail() {
                             <li className="list-group-item">
                                 <a href={`www.${website}`}>Visit our website</a>
                             </li>
-                            {/* <li className="list-group-item">
+                            <li className="list-group-item">
                                 <div className='d-block'>
                                     <button onClick={() => { navigate(-1) }} className='btn btn-primary w-100 text-uppercase'>Back</button>
                                 </div>
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
                 </div>
