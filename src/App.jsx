@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import AllPosts from './screens/AllPosts'
 import PostDetail from './screens/PostDetail'
 import CreatePost from './screens/CreatePost'
+import Signup from './screens/Signup'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route exact path='/login' element={<Login />}></Route>
+        <Route exact path='/signup' element={<Signup />}></Route>
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/posts" element={<AllPosts />} />
