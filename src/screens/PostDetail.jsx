@@ -1,7 +1,6 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { API_BASE_URL } from '../config/constant'
 import './PostDetail.css'
